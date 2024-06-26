@@ -1,0 +1,29 @@
+{
+  "name": "footsmoke",
+  "version": "0.0.0",
+  "description": "Search for text in your footer with playwright",
+  "type": "module",
+  "private": true,
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delegator/footsmoke.git"
+  },
+  "author": "Michael Utz <michael@theutz.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/delegator/footsmoke/issues"
+  },
+  "homepage": "https://github.com/delegator/footsmoke#readme",
+  "dependencies": {
+    "@playwright/test": "^1.45.0",
+    "axios": "^1.7.2",
+    "fast-xml-parser": "^4.4.0",
+    "playwright": "^1.45.0"
+  }
+}
