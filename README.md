@@ -28,3 +28,7 @@ docker run --rm \
     _(Defaults to `2`)_
   - `FOOTSMOKE_TIMEOUT`: the amount of time in ms to wait per test before
     failing. _(Defaults to `30000`, or 30 seconds)_
+
+## Testing
+
+Nothing yet. Use at your own risk!
