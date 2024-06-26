@@ -15,8 +15,16 @@ docker run --rm \
 
 ## Environment Variables
 
-- `FOOTSMOKE_URL`: the root URL from which to search for the `sitemap.xml`
-  file.
-- `FOOTSMOKE_TEXT`: the text to search for.
-- `FOOTSMOKE_SELECTOR`: the CSS selector used to identify where to search for
-  the text. _(Defaults to `footer`)_
+- Required
+  - `FOOTSMOKE_URL`: the root URL from which to search for the `sitemap.xml`
+    file.
+  - `FOOTSMOKE_TEXT`: the text to search for.
+- Optional
+  - `FOOTSMOKE_SELECTOR`: the CSS selector used to identify where to search for
+    the text. _(Defaults to `footer`)_
+  - `FOOTSMOKE_WORKERS`: the number of processes to run simultaneously.
+    _(Defaults to auto-detect)_
+  - `FOOTSMOKE_RETRIES`: the number of retries per failed test to attempt.
+    _(Defaults to `2`)_
+  - `FOOTSMOKE_TIMEOUT`: the amount of time in ms to wait per test before
+    failing. _(Defaults to `30000`, or 30 seconds)_

@@ -4,19 +4,20 @@ import { devices } from "@playwright/test";
 const baseURL = process.env.FOOTSMOKE_URL;
 if (!baseURL) throw new Error("FOOTSMOKE_URL has not been set");
 
+const retries = process.env.FOOTSMOKE_RETRIES ?? 2;
+const workers = process.env.FOOTSMOKE_WORKERS ?? undefined;
+const timeout = process.env.FOOTSMOKE_TIMEOUT ?? 30 * 1000;
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
   testDir: "./tests",
-  timeout: 30 * 1000,
+  timeout,
   forbidOnly: true,
-  retries: 2,
-  workers: 2,
+  retries,
+  workers,
   reporter: "list",
-  // reporter: isProd
-  //   ? [["github"], ["html", { outputFolder: "./storage/playwright-reports" }]]
-  //   : "list",
   use: {
     actionTimeout: 0,
     baseURL: baseURL?.replace(/\/$/, ""),
